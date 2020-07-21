@@ -1,0 +1,115 @@
+body {
+    background: #f8f8f8;
+    color: #2c3e50;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+h1 {
+    font-size: 3.6em;
+    font-weight: 100;
+    text-align: center;
+    margin-bottom: 0;
+    color: #4267b8;
+}
+.image-carousel, .image-dots-step {
+    display: flex;
+    justify-content: center;
+    width: 640px;
+}
+.image-carousel-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0 40px;
+    color: #666a73;
+}
+.image-carousel-container {
+    overflow: hidden;
+}
+/* ============================================================== */
+/* css for image and image info */
+.image-carousel-list {
+    display: flex;
+    transition: transform 150ms ease-out;
+    transform: translatex(0px);
+}
+.image-carousel-list .image-carousel-item {
+    margin: 0 10px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px 0 rgba(40, 44, 53, .06), 0 2px 2px 0 rgba(40, 44, 53, .08);
+    background-color: #fff;
+    border-radius: 4px;
+    z-index: 3;
+    margin-bottom: 2px;
+}
+.image-carousel-list .image-carousel-item:first-child {
+    margin-left: 20px;
+}
+.image-carousel-list .image-carousel-item:last-child {
+    margin-right: 0;
+}
+.image-carousel-list .image-carousel-item img {
+    vertical-align: bottom;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    transition: opacity 150ms linear;
+    user-select: none;
+}
+.image-carousel-list .image-carousel-item:hover {
+    opacity: 0.5;
+    cursor: pointer;
+}
+.image-carousel-list .image-carousel-item-name {
+    border-top: 0;
+    padding: 7px 15px;
+}
+.image-carousel-list .image-carousel-item-name p {
+    padding: 3px 0;
+    margin: 0;
+    margin-bottom: 2px;
+    font-size: 19px;
+    font-weight: 500;
+    color: #2c3e50;
+    user-select: none;
+}
+.image-dot a {
+    padding: 3px 9px;
+    border: 1px solid #4267b8;
+    border-radius: 16px;
+    margin: 0 2px;
+}
+.image-dot a:hover, .dot-active a {
+    cursor: pointer;
+    background-color: #4267b8;
+    color: #fff;
+}
+
+/* ============================================================== */
+/* css for arrow right - left */
+.image-carousel-arrow-left, .image-carousel-arrow-right {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    padding: 10px;
+    box-sizing: border-box;
+    border-top: 2px solid #4267b8;
+    border-right: 2px solid #4267b8;
+    cursor: pointer;
+    margin: 0 20px;
+    transition: transform 150ms linear;
+}
+.image-carousel-arrow-left[disabled], .image-carousel-arrow-right[disabled] {
+    opacity: 0.2;
+    border-color: black;
+}
+.image-carousel-arrow-left {
+    transform: rotate(-135deg);
+}
+.image-carousel-arrow-left:active {
+    transform: rotate(-135deg) scale(0.9);
+}
+.image-carousel-arrow-right {
+    transform: rotate(45deg);
+}
+.image-carousel-arrow-right:active {
+    transform: rotate(45deg) scale(0.9);
+}
